@@ -137,7 +137,7 @@ body {
   position: absolute;
   top: 0;
   right: -1rem;
-  width: 95rem;
+  width: 110rem;
   z-index: -1;
 }
 
@@ -283,16 +283,17 @@ body {
 }
 
 .banner-decoration {
-  width: 192rem;
+  width: 220rem;
   position: absolute;
+  z-index: -1;
 }
 
 .banner-decoration.top {
-  top: -5rem;
+  top: -6rem;
 }
 .banner-decoration.bottom {
   transform: rotate(180deg);
-  bottom: -5rem;
+  bottom: -6rem;
 }
 
 /* Section How */
@@ -464,7 +465,64 @@ body {
   }
 }
 @media screen and (max-width: 750px) {
+  .btn{
+    width: 100%!important;
+  }
+  .navbar {
+    padding: 4rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+  }
+  .banner-logo{
+    margin: 0 auto;
+    width: 30rem;
+  }
   .card-bg{
     display: none;
+  }
+  .title::before{
+    width: 80%;
+  }
+  .slogan{
+    width: 80vw;
+  }
+  .description{
+    width: 100%;
+  }
+  .presentation .section-header{
+    display: flex;
+    flex-direction: column;
+  }
+  .presentation-cards{
+    height: 33rem;
+  }
+  .card{
+    width: 65vw;
+    height: 28rem;
+  }
+  .card-img{
+    width: 100%;
+  }
+  .img-ether{
+    width: 13rem;
+  }
+  .banner-decoration{
+    width: 100vw;
+  }
+  .banner-decoration.top {
+    top: -1rem;
+  }
+  .banner-decoration.bottom {
+    bottom: -1rem;
+  }
+  .input-group{
+    flex-direction: column;
+    height: 9.5rem;
+  }
+
+  .input-group .banner-input, .input-group .input-group__bordered {
+    width: 100%;
   }
 }
