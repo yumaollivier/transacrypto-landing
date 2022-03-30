@@ -13,6 +13,7 @@
 
 html {
   font-size: 62.5%;
+  width: 100%;
 }
 
 body {
@@ -20,7 +21,7 @@ body {
   line-height: 2.5rem;
   color: var(--black);
   background-color: var(--semiwhite);
-  width: 100vw;
+  width: 100%;
   overflow-x: hidden;
 }
 
@@ -42,6 +43,7 @@ body {
 
 .btn {
   background: var(--linear-orange);
+  width: 35rem;
   padding: 1rem 4rem;
   border-radius: 8rem;
   font-weight: 500;
@@ -158,7 +160,7 @@ body {
 }
 
 .text-container {
-  width: 40%;
+  width: 50rem;
 }
 
 .slogan {
@@ -176,7 +178,7 @@ body {
 }
 
 .description {
-  width: 80%;
+  width: 40rem;
   margin: 2rem 0;
 }
 
@@ -184,7 +186,8 @@ body {
 .presentation-cards {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
   margin: 10rem 0;
 }
 
@@ -199,6 +202,7 @@ body {
   flex-direction: column;
   position: relative;
   padding: 0.5rem 2rem 1rem 2rem;
+  margin: 0 2rem 2rem 0;
 }
 
 .card::after {
@@ -279,7 +283,7 @@ body {
 }
 
 .banner-decoration {
-  width: 100%;
+  width: 192rem;
   position: absolute;
 }
 
@@ -321,6 +325,7 @@ body {
 }
 .contact .description {
   margin: 0;
+  width: 100%;
 }
 
 .contact-form {
@@ -400,4 +405,66 @@ body {
   width: 100%;
   position: relative;
   bottom: -2rem;
+}
+
+/* RESPONSIVE */
+
+@media screen and (max-width: 1640px) {
+  .container {
+    margin: 0 15rem;
+  }
+}
+
+@media screen and (max-width: 1350px) {
+  .card-bg {
+    width: 70rem;
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  .section-header {
+    margin-bottom: 3rem;
+  }
+  .card-bg {
+    width: 50rem;
+  }
+  .banner {
+    margin: 5rem 0;
+  }
+  .banner-form {
+    width: 90%;
+  }
+  .home{
+    margin-bottom: 8rem;
+  }
+  .how {
+    margin: 10rem 0;
+  }
+  .contact-form {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .container{
+    margin: 0 5rem;
+  }
+  .presentation-cards {
+    height: 40rem;
+    width: 100%;
+    margin-top: 2rem;
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    overflow: auto;
+  }
+  .card{
+    margin-left: 1rem;
+  }
+}
+@media screen and (max-width: 750px) {
+  .card-bg{
+    display: none;
+  }
 }
