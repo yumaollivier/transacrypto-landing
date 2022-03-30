@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="img/logo.png" type="image/png" />
+    <title>TransaCrypto</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <img src="img/logoBg.png" alt="big card background" class="card-bg" />
+    <div class="navbar">
+      <img
+        src="img/miniName.png"
+        alt="logo of transaCrypto"
+        class="banner-logo"
+      />
+    </div>
+    <div class="container">
+      <section class="home">
+        <div class="text-container">
+          <h1 class="slogan">
+            La <b class="bold">Première</b> Marketplace de Petites Annonces en
+            <img class="home-text__img" src="img/crypto.png" alt="" />
+          </h1>
+          <p class="description">
+            Pour la première fois dans l’histoire de la crypto, vous pourrez
+            échanger vos crypto-monnaies contre des biens physiques sans perte
+            et sans contrepartie financière de votre part entre particuliers.
+          </p>
+          <a href="#inform"
+            ><button class="btn">Se tenir informé·e de sa sortie</button></a
+          >
+        </div>
+      </section>
+      <section class="presentation">
+        <div class="section-header">
+          <img
+            class="title-img"
+            src="img/name.png"
+            alt="name of transacrypto"
+          />
+          <h1 class="title">Vous permet...</h1>
+        </div>
+        <div class="presentation-cards">
+          <div class="card">
+            <img class="card-img" src="img/shop.png" alt="" />
+            <p class="card-text">
+              De <b class="bold">vendre</b> vos objets ou vos services contre
+              des crypto monnaies.
+            </p>
+          </div>
+          <div class="card">
+            <img class="card-img" src="img/vehicle.png" alt="" />
+            <p class="card-text">
+              D’enfin pouvoir utiliser vos crypto monnaies pour
+              <b class="bold">acheter</b> des biens physique.
+            </p>
+          </div>
+          <div class="card">
+            <img class="card-img" src="img/ether.png" alt="" />
+            <p class="card-text">
+              De pouvoir <b class="bold">obtenir</b> des crypto monnaies sans en
+              acheter directement.
+            </p>
+          </div>
+          <div class="card">
+            <img class="card-img" src="img/transfer.png" alt="" />
+            <p class="card-text">
+              D’<b class="bold">acheter</b> ou de <b class="bold">vendre</b> vos
+              crypto monnaies contre de l’argent physique.
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+    <section class="banner" id="inform">
+      <img src="img/bannerplus.png" alt="" class="banner-decoration top" />
+      <!-- <div class="message valid visible">
+        <p>Merci beaucoup !</p>
+        <p>
+          Votre inscription a bien été prise en compte, nous vous recontacterons
+          prochainement.
+        </p>
+      </div> -->
+      <form class="banner-form hidden" id="informed">
+        <h1 class="banner-title">Tenez vous informé·e !</h1>
+        <div class="input-group">
+          <input
+            class="banner-input"
+            type="text"
+            name="lastName"
+            placeholder="Nom"
+          />
+          <input
+            class="banner-input"
+            type="text"
+            name="firstName"
+            placeholder="Prénom"
+          />
+        </div>
+        <input
+          class="banner-input"
+          type="email"
+          name="email"
+          placeholder="Adresse Email"
+        />
+        <input class="btn" type="submit" value="Informez-moi !">
+      </form>
+      <img src="img/bannerplus.png" alt="" class="banner-decoration bottom" />
+    </section>
+    <div class="container">
+      <section class="how">
+        <div class="section-header">
+          <h1 class="title"><b class="bold">Comment</b> ça marche ?</h1>
+        </div>
+        <div class="how__text-container">
+          <p class="how-text">
+            Mettez l’annonce de vente de votre bien, de votre service ou encore
+            de votre demande en ligne en vous créant un compte sur
+            <img class="text-img" src="img/name.png" alt="" />
+          </p>
+          <p class="how-text">
+            Une fois l’annonce en ligne, laissez la puissance d’internet faire
+            le travail de distribution et recevez des messages d’autres
+            utilisateurs·trices interessé·es par votre annonce. Enfin, convenez
+            ensemble d’un moment et d’un lieu pour l’échange.
+          </p>
+          <p class="how-text">
+            Face à votre homologue, vous pouvez procéder à la transaction grâce
+            à votre wallet favori tel que <b class="bold">Ledger Nano X</b> ou
+            encore <b class="bold">ZenGo</b> et accumulez les crypto-monnaies
+            <b class="bold">sans frais</b> !
+          </p>
+        </div>
+      </section>
+      <section class="contact">
+        <div class="section-header">
+          <h1 class="title bold">Contact</h1>
+        </div>
+        <p class="description">
+          Vous avez une question ? En savoir plus ? Ou une recommandation ?
+        </p>
+        <p class="description bold message">Contactez-nous ici !</p>
+        <form action="" class="contact-form" id="contact" method="POST">
+          <div class="input-group">
+            <div class="input-group__bordered">
+              <span class="linear-border"></span>
+              <input
+                class="contact-input"
+                type="text"
+                name="lastName"
+                placeholder="Nom"
+              />
+            </div>
+            <div class="input-group__bordered">
+              <span class="linear-border"></span>
+              <input
+                class="contact-input"
+                type="text"
+                name="firstName"
+                placeholder="Prénom"
+              />
+            </div>
+          </div>
+          <div class="input-group__bordered">
+            <span class="linear-border"></span>
+            <input
+              class="contact-input"
+              type="email"
+              name="email"
+              placeholder="Adresse Email"
+            />
+          </div>
+          <div class="textarea-group__bordered">
+            <span class="linear-border"></span>
+            <textarea
+              name="message"
+              cols="30"
+              rows="10"
+              class="contact-textarea"
+              placeholder="Votre message..."
+            ></textarea>
+          </div>
+          <input type="submit" class="btn" value="Envoyer" />
+        </form>
+      </section>
+    </div>
+    <img src="img/footer.png" alt="wave forms" class="footer-img" />
+  </body>
+  <script src="script.js"></script>
+</html>
