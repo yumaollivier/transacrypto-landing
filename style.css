@@ -13,15 +13,15 @@
 
 html {
   font-size: 62.5%;
-  width: 100%;
+  width: 100vw;
 }
 
 body {
   font-size: 1.7rem;
   line-height: 2.5rem;
   color: var(--black);
-  background-color: var(--semiwhite);
-  width: 100%;
+  background: var(--gradientwhite);
+  width: 100vw;
   overflow-x: hidden;
 }
 
@@ -29,8 +29,15 @@ body {
   --black: #000;
   --white: #fff;
   --semiwhite: #f1f1f1;
+  --gradientwhite: linear-gradient(
+    118.46deg,
+    #f7fcff 0%,
+    #e3eeff 99%,
+    #e3eeff 100%
+  );
   --linear-blue: linear-gradient(118.46deg, #09c6f9 0%, #045de9 101.76%);
   --linear-orange: linear-gradient(118.46deg, #ff9549 0%, #ff0000 101.76%);
+  --radius: .3rem;
 }
 
 .bold {
@@ -45,13 +52,17 @@ body {
   background: var(--linear-orange);
   width: 35rem;
   padding: 1rem 4rem;
-  border-radius: 8rem;
+  border-radius: var(--radius);
   font-weight: 500;
   font-size: 2rem;
   color: var(--white);
   border: none;
   box-shadow: -6px 8px 18px rgba(0, 0, 0, 0.2);
   cursor: pointer;
+  -webkit-border-radius: var(--radius);
+  -moz-border-radius: var(--radius);
+  -ms-border-radius: var(--radius);
+  -o-border-radius: var(--radius);
 }
 
 .section-header {
@@ -80,9 +91,13 @@ body {
   background: var(--linear-blue);
   position: absolute;
   z-index: -1;
-  border-radius: 8rem;
+  border-radius: var(--radius);
   bottom: -1rem;
   left: 5rem;
+  -webkit-border-radius: var(--radius);
+  -moz-border-radius: var(--radius);
+  -ms-border-radius: var(--radius);
+  -o-border-radius: var(--radius);
 }
 
 /* .hidden {
@@ -146,8 +161,20 @@ body {
   padding: 4rem 3rem;
 }
 
-.banner-logo {
+.logo-container{
+  position: relative;
   width: 40rem;
+}
+
+.banner-logo {
+  width: 100%;
+}
+
+.banner-logo__slogan{
+  width: 21rem;
+  position: absolute;
+  left: 30%;
+  bottom: -0.5rem;
 }
 
 /* Section 1 */
@@ -194,8 +221,8 @@ body {
 .card {
   width: 33rem;
   height: 32rem;
-  border-radius: 2rem;
-  background-color: var(--semiwhite);
+  border-radius: var(--radius);
+  background: var(--gradientwhite);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -203,6 +230,10 @@ body {
   position: relative;
   padding: 0.5rem 2rem 1rem 2rem;
   margin: 0 2rem 2rem 0;
+  -webkit-border-radius: var(--radius);
+  -moz-border-radius: var(--radius);
+  -ms-border-radius: var(--radius);
+  -o-border-radius: var(--radius);
 }
 
 .card::after {
@@ -211,9 +242,13 @@ body {
   width: calc(100% + 6px);
   height: calc(100% + 6px);
   background: var(--linear-blue);
-  border-radius: 2.2rem;
+  border-radius: var(--radius);
   position: absolute;
   z-index: -1;
+  -webkit-border-radius: var(--radius);
+  -moz-border-radius: var(--radius);
+  -ms-border-radius: var(--radius);
+  -o-border-radius: var(--radius);
 }
 
 .card-text {
@@ -229,10 +264,13 @@ body {
 
 .banner {
   width: 100%;
-  height: 30rem;
+  height: 40rem;
   background: var(--linear-blue);
   position: relative;
   margin: 13rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .banner-title {
@@ -240,7 +278,7 @@ body {
 }
 
 .banner-form {
-  height: 100%;
+  height: 30rem;
   width: 40%;
   color: var(--white);
   margin: 0 auto;
@@ -268,10 +306,14 @@ body {
   width: 100%;
   background-color: transparent;
   border: 2px solid var(--white);
-  border-radius: 10rem;
+  border-radius: var(--radius);
   color: var(--white);
   font-size: 1.7rem;
   font-weight: 500;
+  -webkit-border-radius: var(--radius);
+  -moz-border-radius: var(--radius);
+  -ms-border-radius: var(--radius);
+  -o-border-radius: var(--radius);
 }
 
 .banner-form .btn {
@@ -342,13 +384,17 @@ body {
 .contact-input {
   padding: 1rem 2.5rem;
   width: 100%;
-  background-color: var(--semiwhite);
-  border-radius: 10rem;
+  background: var(--gradientwhite);
+  border-radius: var(--radius);
   border: none;
   color: var(--black);
   font-size: 1.7rem;
   font-weight: 500;
   position: relative;
+  -webkit-border-radius: var(--radius);
+  -moz-border-radius: var(--radius);
+  -ms-border-radius: var(--radius);
+  -o-border-radius: var(--radius);
 }
 
 .input-group__bordered,
@@ -369,27 +415,39 @@ body {
   position: absolute;
   top: -2px;
   left: -2px;
-  border-radius: 20rem;
+  border-radius: var(--radius);
+  -webkit-border-radius: var(--radius);
+  -moz-border-radius: var(--radius);
+  -ms-border-radius: var(--radius);
+  -o-border-radius: var(--radius);
 }
 
 .textarea-group__bordered .linear-border {
-  border-radius: 2.3rem;
+  border-radius: var(--radius);
   height: 101%;
   top: -2px;
+  -webkit-border-radius: var(--radius);
+  -moz-border-radius: var(--radius);
+  -ms-border-radius: var(--radius);
+  -o-border-radius: var(--radius);
 }
 
 .contact-textarea {
   resize: none;
   position: relative;
-  background-color: var(--semiwhite);
+  background: var(--gradientwhite);
   width: 100%;
   height: 17rem;
-  border-radius: 2rem;
+  border-radius: var(--radius);
   padding: 2rem 3rem;
   border: none;
   color: var(--black);
   font-size: 1.7rem;
   font-weight: 500;
+  -webkit-border-radius: var(--radius);
+  -moz-border-radius: var(--radius);
+  -ms-border-radius: var(--radius);
+  -o-border-radius: var(--radius);
 }
 
 .contact-textarea::placeholder,
@@ -406,6 +464,62 @@ body {
   width: 100%;
   position: relative;
   bottom: -2rem;
+}
+
+/* NOTIFICATION */
+.notification {
+  position: fixed;
+  right: 100%;
+  bottom: 5rem;
+  min-width: 30rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 5rem;
+  background: var(--linear-blue);
+  border-radius: var(--radius);
+  -webkit-border-radius: var(--radius);
+  -moz-border-radius: var(--radius);
+  -ms-border-radius: var(--radius);
+  -o-border-radius: var(--radius);
+  transition: all 0.2s;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+}
+
+.notification.error{
+  background: var(--linear-orange);
+}
+
+.notification.visible{
+ right: 2rem;
+ transition: all 0.2s;
+ -webkit-transition: all 0.2s;
+ -moz-transition: all 0.2s;
+ -ms-transition: all 0.2s;
+ -o-transition: all 0.2s;
+}
+
+.notification__content {
+  background: var(--gradientwhite);
+  min-height: 5rem;
+  min-width: 30rem;
+  border-radius: var(--radius);
+  -webkit-border-radius: var(--radius);
+  -moz-border-radius: var(--radius);
+  -ms-border-radius: var(--radius);
+  -o-border-radius: var(--radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 1rem;
+  margin: .25rem .25rem;
+}
+
+.notification__content p {
+  font-weight: 500;
 }
 
 /* RESPONSIVE */
@@ -435,7 +549,7 @@ body {
   .banner-form {
     width: 90%;
   }
-  .home{
+  .home {
     margin-bottom: 8rem;
   }
   .how {
@@ -447,7 +561,7 @@ body {
 }
 
 @media screen and (max-width: 1000px) {
-  .container{
+  .container {
     margin: 0 5rem;
   }
   .presentation-cards {
@@ -460,13 +574,13 @@ body {
     grid-template-rows: 1fr;
     overflow: auto;
   }
-  .card{
+  .card {
     margin-left: 1rem;
   }
 }
 @media screen and (max-width: 750px) {
-  .btn{
-    width: 100%!important;
+  .btn {
+    width: 100% !important;
   }
   .navbar {
     padding: 4rem 2rem;
@@ -475,40 +589,40 @@ body {
     justify-content: center;
     margin-bottom: 2rem;
   }
-  .banner-logo{
+  .banner-logo {
     margin: 0 auto;
     width: 30rem;
   }
-  .card-bg{
+  .card-bg {
     display: none;
   }
-  .title::before{
+  .title::before {
     width: 80%;
   }
-  .slogan{
+  .slogan {
     width: 80vw;
   }
-  .description{
+  .description {
     width: 100%;
   }
-  .presentation .section-header{
+  .presentation .section-header {
     display: flex;
     flex-direction: column;
   }
-  .presentation-cards{
+  .presentation-cards {
     height: 33rem;
   }
-  .card{
+  .card {
     width: 65vw;
     height: 28rem;
   }
-  .card-img{
+  .card-img {
     width: 100%;
   }
-  .img-ether{
+  .img-ether {
     width: 13rem;
   }
-  .banner-decoration{
+  .banner-decoration {
     width: 100vw;
   }
   .banner-decoration.top {
@@ -517,12 +631,13 @@ body {
   .banner-decoration.bottom {
     bottom: -1rem;
   }
-  .input-group{
+  .input-group {
     flex-direction: column;
     height: 9.5rem;
   }
 
-  .input-group .banner-input, .input-group .input-group__bordered {
+  .input-group .banner-input,
+  .input-group .input-group__bordered {
     width: 100%;
   }
 }
