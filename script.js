@@ -13,13 +13,12 @@ const formSubmit = e => {
   e.preventDefault();
 
   const formData = new FormData();
-  const firstName = document.querySelectorAll('input[name="firstName"]')[0]
+  const name = document.querySelectorAll('input[name="name"]')[0]
     .value;
-  const lastName = document.querySelectorAll('input[name="lastName"]')[0].value;
   const email = document.querySelectorAll('input[name="email"]')[0].value;
-  if (firstName.length > 0 && lastName.length > 0 && email.length > 0) {
+  if (name.length > 0 && email.length > 0) {
     const formData = new FormData();
-    formData.append('FirstName', firstName);
+    formData.append('Name', name);
     formData.append('LastName', lastName);
     formData.append('Email', email);
 
@@ -55,20 +54,17 @@ const formSubmit = e => {
 const contactFormSubmit = e => {
   e.preventDefault();
 
-  const firstName = document.querySelectorAll('input[name="firstName"]')[1]
+  const name = document.querySelectorAll('input[name="name"]')[1]
     .value;
-  const lastName = document.querySelectorAll('input[name="lastName"]')[1].value;
   const email = document.querySelectorAll('input[name="email"]')[1].value;
   const message = document.querySelector('textarea[name="message"]').value;
   if (
-    firstName.length > 0 &&
-    lastName.length > 0 &&
+    name.length > 0 &&
     email.length > 0 &&
     message.length > 0
   ) {
     const formData = new FormData();
-    formData.append('FirstName', firstName);
-    formData.append('LastName', lastName);
+    formData.append('Name', name);
     formData.append('Email', email);
     formData.append('Message', message);
 

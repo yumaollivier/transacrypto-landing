@@ -289,18 +289,6 @@ body {
   transition: all 0.5s;
 }
 
-.input-group {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-direction: row;
-  width: 100%;
-}
-
-.input-group .banner-input {
-  width: 45%;
-}
-
 .banner-input {
   padding: 0.7rem 3rem;
   width: 100%;
@@ -403,10 +391,6 @@ body {
   width: 100%;
 }
 
-.input-group .input-group__bordered {
-  width: 45%;
-}
-
 .linear-border {
   display: block;
   width: calc(100% + 4px);
@@ -469,7 +453,7 @@ body {
 /* NOTIFICATION */
 .notification {
   position: fixed;
-  right: 100%;
+  right: -100%;
   bottom: 5rem;
   min-width: 30rem;
   display: flex;
@@ -630,14 +614,5 @@ body {
   }
   .banner-decoration.bottom {
     bottom: -1rem;
-  }
-  .input-group {
-    flex-direction: column;
-    height: 9.5rem;
-  }
-
-  .input-group .banner-input,
-  .input-group .input-group__bordered {
-    width: 100%;
   }
 }
