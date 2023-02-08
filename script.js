@@ -18,7 +18,7 @@ const formSubmit = e => {
   const email = document.querySelectorAll('input[name="email"]')[0].value;
   if (name.length > 0 && email.length > 0) {
     const formData = new FormData();
-    formData.append('Name', name);
+    formData.append('firstName', name);
     formData.append('LastName', lastName);
     formData.append('Email', email);
 
@@ -64,7 +64,7 @@ const contactFormSubmit = e => {
     message.length > 0
   ) {
     const formData = new FormData();
-    formData.append('Name', name);
+    formData.append('firstName', name);
     formData.append('Email', email);
     formData.append('Message', message);
 
